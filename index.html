@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Mascarello — Produtos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <span class="brand-icon">🛍️</span>
+          <span class="brand-text">Catálogo Mascarello</span>
+        </a>
+
+        <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <ul class="navbar-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link active">🏠 Início</a></li>
+          <li><a href="sobre.html" class="nav-link">ℹ️ Sobre Nós</a></li>
+          <li><a href="contato.html" class="nav-link">📞 Contato</a></li>
+          <li>
+            <a href="admin.html" class="nav-link nav-link-admin"
+              >🔐 Área do Lojista</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+      <div class="header-content">
+        <span class="header-icon">🛍️</span>
+        <h1>Catálogo de Produtos</h1>
+        <p class="header-subtitle">
+          Encontre os melhores produtos com os melhores preços
+        </p>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <section class="section-produtos">
+        <div class="section-header">
+          <h2>Nossos Produtos</h2>
+          <p>Confira nossa seleção especial para você</p>
+        </div>
+        <div id="vitrine" class="grid-produtos"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 MeuCatálogo. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="sobre.html" class="footer-link">Sobre Nós</a>
+          <a href="contato.html" class="footer-link">Contato</a>
+          <a href="admin.html" class="link-admin">🔐 Área do Lojista</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel Administrativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body class="admin-body">
+    <div class="admin-wrapper">
+      <!-- COLUNA ESQUERDA: Formulário de cadastro -->
+      <div class="painel-container painel-form">
+        <div class="painel-header">
+          <span class="painel-icon">📦</span>
+          <h2>Cadastrar Novo Produto</h2>
+          <div class="usuario-logado">
+            <p>Operador: <span id="nome-usuario">Carregando...</span></p>
+            <button onclick="sairDoSistema()" class="btn-sair">
+              Sair do Sistema
+            </button>
+          </div>
+          <p class="painel-subtitle">
+            Preencha os dados abaixo para adicionar um item à vitrine
+          </p>
+        </div>
+
+        <div class="form-grupo">
+          <label for="input-nome">Nome do Produto</label>
+          <input
+            type="text"
+            id="input-nome"
+            placeholder="Ex: Tênis Nike Air Max"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="input-categoria">Categoria</label>
+          <input
+            type="text"
+            id="input-categoria"
+            placeholder="Ex: Produto de Limpeza"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="input-preco">Preço (apenas números e ponto)</label>
+          <input
+            type="number"
+            id="input-preco"
+            step="0.01"
+            placeholder="Ex: 199.90"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label for="input-imagem">Caminho da Imagem</label>
+          <input
+            type="text"
+            id="input-imagem"
+            placeholder="Ex: img/tenis.png"
+          />
+        </div>
+
+        <button class="btn-salvar" onclick="cadastrarProduto()">
+          <span class="btn-icon">💾</span> Salvar no Banco
+        </button>
+
+        <p id="mensagem-aviso"></p>
+
+        <div class="painel-divider"></div>
+
+        <div class="painel-footer">
+          <a href="index.html" class="link-voltar">← Voltar para a Vitrine</a>
+        </div>
+      </div>
+
+      <!-- COLUNA CENTRAL: Lista de produtos -->
+      <div class="painel-container painel-lista">
+        <div class="painel-header">
+          <span class="painel-icon">📋</span>
+          <h2>Produtos Cadastrados</h2>
+          <p class="painel-subtitle" id="contagem-produtos">Carregando...</p>
+        </div>
+        <div id="lista-produtos" class="lista-produtos"></div>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

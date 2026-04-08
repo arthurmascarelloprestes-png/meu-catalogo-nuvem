@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Mascarello — Contato</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-brand">
+          <span class="brand-icon">🛍️</span>
+          <span class="brand-text">Catálogo Mascarello</span>
+        </a>
+
+        <button class="navbar-toggle" id="navToggle" aria-label="Abrir menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <ul class="navbar-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">🏠 Início</a></li>
+          <li><a href="sobre.html" class="nav-link">ℹ️ Sobre Nós</a></li>
+          <li><a href="contato.html" class="nav-link active">📞 Contato</a></li>
+          <li>
+            <a href="admin.html" class="nav-link nav-link-admin"
+              >🔐 Área do Lojista</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <header class="page-hero">
+      <div class="header-content">
+        <span class="header-icon">📞</span>
+        <h1>Fale Conosco</h1>
+        <p class="header-subtitle">Estamos prontos para atender você</p>
+      </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+      <!-- Cards de Contato -->
+      <section class="section-contato">
+        <div class="contato-container">
+          <div class="section-header">
+            <h2>Nossos Canais</h2>
+            <p>Escolha a melhor forma de entrar em contato</p>
+          </div>
+          <div class="contato-grid">
+            <div class="contato-card">
+              <span class="contato-icon">📧</span>
+              <h3>E-mail</h3>
+              <p>contato@meucatalogo.com</p>
+            </div>
+            <div class="contato-card">
+              <span class="contato-icon">📱</span>
+              <h3>WhatsApp</h3>
+              <p>(11) 99999-9999</p>
+            </div>
+            <div class="contato-card">
+              <span class="contato-icon">📍</span>
+              <h3>Endereço</h3>
+              <p>Rua Exemplo, 123 — São Paulo, SP</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulário de Contato -->
+      <section class="section-formulario">
+        <div class="formulario-container">
+          <div class="section-header">
+            <h2>Envie uma Mensagem</h2>
+            <p>Preencha o formulário e retornaremos em breve</p>
+          </div>
+          <form class="form-contato" id="formContato">
+            <div class="form-row">
+              <div class="form-grupo">
+                <label for="nome">Seu Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Digite seu nome"
+                  required
+                />
+              </div>
+              <div class="form-grupo">
+                <label for="email">Seu E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="seu@email.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-grupo">
+              <label for="assunto">Assunto</label>
+              <input
+                type="text"
+                id="assunto"
+                placeholder="Sobre o que deseja falar?"
+                required
+              />
+            </div>
+            <div class="form-grupo">
+              <label for="mensagem">Mensagem</label>
+              <textarea
+                id="mensagem"
+                rows="5"
+                placeholder="Escreva sua mensagem aqui..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">
+              <span class="btn-icon">📨</span> Enviar Mensagem
+            </button>
+            <p id="formMensagem" class="form-feedback"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2026 MeuCatálogo. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Produtos</a>
+          <a href="sobre.html" class="footer-link">Sobre Nós</a>
+          <a href="admin.html" class="link-admin">🔐 Área do Lojista</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
