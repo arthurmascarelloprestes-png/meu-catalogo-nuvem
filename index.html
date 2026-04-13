@@ -52,30 +52,46 @@
       </div>
     </header>
 
-    <main>
-      <section class="carrinho-container">
-        <h2>🛍️ Meu Carrinho</h2>
+    <main class="main-layout">
+      <div class="conteudo-produtos">
+        <section class="section-produtos">
+          <div class="section-header">
+            <h2>Nossos Produtos</h2>
+            <p>Confira nossa seleção especial para você</p>
+          </div>
+          <div id="vitrine" class="grid-produtos"></div>
+        </section>
+      </div>
+
+      <div id="cart-icon" onclick="toggleCarrinho()">
+        <span>🛒</span>
+        <span id="cart-count">0</span>
+      </div>
+
+      <div id="carrinho-overlay" onclick="toggleCarrinho()"></div>
+
+      <aside id="carrinho-lateral">
+        <div class="carrinho-header">
+          <h2>🛍️ Meu Carrinho</h2>
+          <button class="btn-fechar" onclick="toggleCarrinho()">✕</button>
+        </div>
+
         <ul id="lista-carrinho">
           <p>Seu carrinho está vazio.</p>
         </ul>
-        <div class="carrinho-total">
-          <strong>Total: <span id="valor-total">R$ 0,00</span></strong>
-        </div>
-        <button onclick="finalizarCompra()" class="btn-finalizar">
-          Finalizar Pedido
-        </button>
-        <button onclick="esvaziarCarrinho()" class="btn-limpar">
-          Limpar Carrinho
-        </button>
-      </section>
 
-      <section class="section-produtos">
-        <div class="section-header">
-          <h2>Nossos Produtos</h2>
-          <p>Confira nossa seleção especial para você</p>
+        <div class="carrinho-footer">
+          <div class="carrinho-total">
+            <strong>Total: <span id="valor-total">R$ 0,00</span></strong>
+          </div>
+          <button onclick="finalizarCompra()" class="btn-finalizar">
+            Finalizar Pedido
+          </button>
+          <button onclick="esvaziarCarrinho()" class="btn-limpar">
+            Limpar Carrinho
+          </button>
         </div>
-        <div id="vitrine" class="grid-produtos"></div>
-      </section>
+      </aside>
     </main>
 
     <footer>

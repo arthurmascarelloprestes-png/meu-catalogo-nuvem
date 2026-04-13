@@ -1649,3 +1649,49 @@ footer {
     padding: 30px;
   }
 }
+
+/* Ajustando para o ID que está no seu HTML */
+#carrinho-lateral {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 300px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  overflow-y: auto;
+}
+
+/* Estilo para o botão X de fechar (no topo do carrinho) */
+.btn-fechar {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #999;
+  float: right;
+}
+
+.btn-fechar:hover {
+  color: #e74c3c;
+}
+
+/* Estilo para o botão ❌ de remover cada item */
+.btn-remover {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-remover:hover {
+  opacity: 1;
+}
